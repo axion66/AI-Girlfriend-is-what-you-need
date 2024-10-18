@@ -55,15 +55,37 @@ Future<String> model(List chat_history, String date) async {
 
 void trigger_AI(List chat_history, String date) async {
   final users = FirebaseFirestore.instance.collection('chat');
+  final random = Random();
 
   final ai_output = await model(chat_history, date);
-  // chat_history includes all the conversational history, including the user just typed.
 
-  chat_history.add({
-    'conversation': ai_output,
-    'time': date,
-    'user': false, // false implies the AI typed.
-  });
+  // Split the AI output if it contains more than two sentences
+  List<String> sentences = ai_output.split(RegExp(r'(?<=[.!?])\s+'));
+
+  if (sentences.length > 2 && random.nextDouble() < 0.7) {
+    // 70% probability
+    int midPoint = sentences.length ~/ 2;
+    String firstPart = sentences.sublist(0, midPoint).join(' ').trim();
+    String secondPart = sentences.sublist(midPoint).join(' ').trim();
+
+    chat_history.add({
+      'conversation': firstPart,
+      'time': date,
+      'user': false,
+    });
+
+    chat_history.add({
+      'conversation': secondPart,
+      'time': date,
+      'user': false,
+    });
+  } else {
+    chat_history.add({
+      'conversation': ai_output.trim(),
+      'time': date,
+      'user': false,
+    });
+  }
 
   await users
       .doc('chat_example')
