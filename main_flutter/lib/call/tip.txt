@@ -1,0 +1,5 @@
+
+
+
+Order: user voice input -> Whisper(turning into Text) 
+-> ChatGPT(creating a response to the text input) -> ChatTTS(creating a voice based on the text)

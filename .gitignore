@@ -1,0 +1,32 @@
+# Flutter specific
+**/build/
+**/ios/
+**/ios/Flutter/Flutter.framework/
+**/ios/Flutter/Flutter.podspec
+**/ios/.symlinks/
+**/ios/Pods/
+**/.dart_tool/
+**/.packages
+**/pubspec.lock
+
+# Firebase specific
+**/android/app/google-services.json
+**/ios/Runner/GoogleService-Info.plist
+
+# Dart specific
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/packages
+**/.packages
+**/.dart_tool/
+
+# Misc
+**/.idea/
+**/.vscode/
+**/app-debug.apk
+**/app-release.apk
+**/key.jks
+
+#firebase
+**/firebase_options.dart
+**/windows/
