@@ -5,8 +5,9 @@ It can be enhanced way better.
 
 # Demo video
 
-[![Demo video](https://raw.githubusercontent.com/axion66/AI_girlfriend_chatbot/main/demo_chat.png)](https://raw.githubusercontent.com/axion66/AI_girlfriend_chatbot/main/readme_asset/demo.mov)
-
+<a href="https://raw.githubusercontent.com/axion66/AI_girlfriend_chatbot/main/readme_asset/demo.mov">
+    <img src="https://raw.githubusercontent.com/axion66/AI_girlfriend_chatbot/main/demo_chat.png" alt="Demo video" width="500" />
+</a>
 
 
 ## Features
