@@ -14,5 +14,5 @@ It can be enhanced way better.
 - g4a-based AI girlfriend (or boyfriend)
 - AI with personality (If do pre-prompting on the chatbot)
 - For better quality, your girlfriend may split her chat into two parts. It feels AI if we receive one long text as a return.
-- Included voice-to-voice conversation, but somehow now it doesn't work at this moment.
+- Included voice-to-voice conversation
 - face-to-face(facetime) not supported
